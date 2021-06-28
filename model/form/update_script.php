@@ -27,7 +27,6 @@ if ($_FILES['img']['size'] > 0) {
     {
         $error['img'] = 'img pas autorisé';
     }
-
     $request = $db->prepare("UPDATE disc SET disc_title=:title, disc_year=:year,disc_genre=:genre, disc_label=:label,disc_price=:price,artist_id=:artiste_id,disc_picture=:picture WHERE disc_id=:disc_id;");
     $request->bindValue(':picture', $modifyArtiste);
     }
